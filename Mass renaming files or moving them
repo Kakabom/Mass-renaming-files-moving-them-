@@ -2,7 +2,7 @@
 
 num=1
 lsa=$( ls )
-wcw=$( echo "$lsa" | wc -w )
+wcw=$( ls | wc -w )
 
 until [[ "$num" -gt "$wcw" ]] ; do
      lsb=$( echo "$lsa" | cut -d$'\n' -f$num  )
