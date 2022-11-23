@@ -1,0 +1,12 @@
+#!/bin/bash
+
+num=1
+lsa=$( ls )
+wcw=$( echo "$lsa" | wc -w )
+
+until [[ "$num" -gt "$wcw" ]] ; do
+     lsb=$( echo "$lsa" | cut -d$'\n' -f$num  )
+     mv "$lsb" "name$num" #can add path berore second var or move without renaming by adding path and changing second var and name to first var
+
+     (( num ++ ))
+done
