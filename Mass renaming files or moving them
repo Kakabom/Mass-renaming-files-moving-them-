@@ -7,8 +7,8 @@ lsa=$( ls )
 wcw=$( ls | wc -w )
 
 until [[ "$n" -gt "$wcw" ]] ; do
-     lsb=$( echo "$lsa" | cut -d$'\n' -f$n  )
-     mv "$lsb" "name$n" #can add path berore second var or move without renaming by adding path and changing second var and name to first var
+     file=$( echo "$lsa" | cut -d$'\n' -f$n  )
+     mv "$file" "name$n" #can add path berore second var or move without renaming by adding path and changing second var and name to first var
 
      ((n++))
 done
