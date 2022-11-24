@@ -1,3 +1,5 @@
+#Two solutions, the first one is too complicated 
+
 #!/bin/bash
 
 num=1
@@ -9,4 +11,13 @@ until [[ "$num" -gt "$wcw" ]] ; do
      mv "$lsb" "name$num" #can add path berore second var or move without renaming by adding path and changing second var and name to first var
 
      (( num ++ ))
+done
+
+# a more efficient way of doing it would be:
+
+#!/bin/bash
+n=1
+for file in ./*; do
+  mv "$file" "./name$n"
+  ((n++))
 done
