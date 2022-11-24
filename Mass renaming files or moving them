@@ -1,6 +1,6 @@
-#Two solutions, the first one is too complicated 
-
 #!/bin/bash
+
+#Two solutions, the first one is too complicated 
 
 num=1
 lsa=$( ls )
@@ -15,7 +15,6 @@ done
 
 # a more efficient way of doing it would be:
 
-#!/bin/bash
 n=1
 for file in ./*; do
   mv "$file" "./name$n"
